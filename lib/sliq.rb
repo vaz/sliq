@@ -69,6 +69,7 @@ module Sliq
   end
 
   class Engine < Slim::Engine
+    define_options format: :html5
     replace Slim::Parser, Parser, :file, :tabsize, :shortcut, :default_tag, :attr_delims, :attr_list_delims, :code_attr_delims
     before Slim::Interpolation, Interpolation
     after Parser, Tags
